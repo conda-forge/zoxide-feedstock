@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ajeetdsouza/{{ name }}/archive/zoxide-{{ version }}.tar.gz
+  url: https://github.com/ajeetdsouza/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 992deee4a65608542a1b5ef696182bb91c4369d5603873b2f3fdde4e01210682
 
 build:
