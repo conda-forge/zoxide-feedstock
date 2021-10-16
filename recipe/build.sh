@@ -3,9 +3,7 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 
-cargo-bundle-licenses \
-    --format yaml \
-    --output THIRDPARTY.yml
+cargo-bundle-licenses --format yaml --output CI.THIRDPARTY.yml --previous THIRDPARTY.yml --check-previous
 
 
 # build statically linked binary with Rust
