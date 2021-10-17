@@ -1,5 +1,5 @@
 :: check licenses
-cargo-bundle-licenses --format yaml --output CI.THIRDPARTY.yml --previous THIRDPARTY.yml --check-previous
+cargo-bundle-licenses --format yaml --output CI.THIRDPARTY.yml --previous "%RECIPE_DIR%\THIRDPARTY.yml" --check-previous
 
 :: build
 cargo install --locked --root "%PREFIX%" --path . || goto :error
