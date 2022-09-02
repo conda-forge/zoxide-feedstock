@@ -1,5 +1,5 @@
 {% set name = "zoxide" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ajeetdsouza/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 111c5f1cd92b1cb54e2f0a801003098a601c653ec5a378f3d0ea1c9659854477
+  sha256: eb1839a4ab0ce7680c5a97dc753d006d5604b71c41a77047e981a439ac3b9de6
 
 build:
   number: 0
