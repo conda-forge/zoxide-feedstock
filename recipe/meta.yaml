@@ -1,5 +1,5 @@
 {% set name = "zoxide" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ajeetdsouza/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 111c5f1cd92b1cb54e2f0a801003098a601c653ec5a378f3d0ea1c9659854477
+  sha256: ec002bdca37917130ae34e733eb29d4baa03b130c4b11456d630a01a938e0187
 
 build:
   number: 0
@@ -18,6 +18,8 @@ requirements:
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - cargo-bundle-licenses
+  run:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   commands:
@@ -39,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - daizeng1984
+    - anjos
