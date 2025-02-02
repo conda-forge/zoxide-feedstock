@@ -1,14 +1,13 @@
+@echo on
+
+set CARGO_PROFILE_RELEASE_STRIP=symbols
+set CARGO_PROFILE_RELEASE_LTO=fat
+
 :: check licenses
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 
 :: build
-cargo install --locked --root "%PREFIX%" --path . || goto :error
-
-:: strip debug symbols
-strip "%PREFIX%\bin\zoxide.exe" || goto :error
-
-:: remove extra build file
-del /F /Q "%PREFIX%\.crates.toml"
+cargo install --bins --no-track --locked --root "%PREFIX%" --path . || goto :error
 
 goto :EOF
 
