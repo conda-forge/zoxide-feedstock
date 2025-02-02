@@ -15,12 +15,9 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib("c") }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("m2w64_c") }}          # [win]
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
-  run:
 
 test:
   commands:
@@ -29,7 +26,6 @@ test:
 about:
   home: https://github.com/ajeetdsouza/zoxide
   license: MIT
-  license_family: MIT
   license_file:
     - LICENSE
     - THIRDPARTY.yml
@@ -43,3 +39,4 @@ extra:
   recipe-maintainers:
     - daizeng1984
     - anjos
+    - danielnachun
