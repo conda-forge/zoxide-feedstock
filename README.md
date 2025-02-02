@@ -20,14 +20,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/zoxide-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/zoxide-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -206,4 +199,5 @@ Feedstock Maintainers
 
 * [@anjos](https://github.com/anjos/)
 * [@daizeng1984](https://github.com/daizeng1984/)
+* [@danielnachun](https://github.com/danielnachun/)
 
