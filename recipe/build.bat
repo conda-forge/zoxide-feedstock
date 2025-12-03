@@ -1,4 +1,5 @@
 @echo on
+@setlocal EnableDelayeExpansion
 
 set CARGO_PROFILE_RELEASE_STRIP=symbols
 set CARGO_PROFILE_RELEASE_LTO=fat
@@ -9,7 +10,7 @@ cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 :: build
 cargo install --bins --no-track --locked --root "%PREFIX%" --path . || goto :error
 
-goto :EOF
+goto :eof
 
 :error
 echo Failed with error #%errorlevel%.
