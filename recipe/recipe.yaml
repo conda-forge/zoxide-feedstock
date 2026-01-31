@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.9.7
+  version: "0.9.9"
 
 package:
   name: zoxide
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/ajeetdsouza/zoxide/archive/v${{ version }}.tar.gz
-  sha256: d93ab17a01de68529ef37b599524f882dc654835cc121a9097dd3f2952fd207e
+  sha256: eddc76e94db58567503a3893ecac77c572f427f3a4eabdfc762f6773abf12c63
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
